@@ -78,11 +78,11 @@ class Dog
     dog = Dog.new(id: row[0], name: row[1], breed: row[2])
   end
 
-  def update 
-    sql = <<-SQL 
+  def update
+    sql = <<-SQL
     UPDATE dogs SET name = ?, breed = ? WHERE id = ?
-    SQL 
+    SQL
     DB[:conn].execute(sql, self.name, self.breed, self.id)
-  end 
-  
+  end
+
 end
