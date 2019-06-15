@@ -79,7 +79,7 @@ class Dog
     WHERE name = ?
     LIMIT 1
     SQL
-    DB[:conn].execute(sql, self.name).first 
+    DB[:conn].execute(sql, self.name).first
  end
 
 end
